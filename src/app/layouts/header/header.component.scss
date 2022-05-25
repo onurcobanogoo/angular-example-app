@@ -1,0 +1,63 @@
+// Variables
+@import "src/assets/styles/variables/colors";
+@import "src/assets/styles/variables/fonts";
+
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 70px;
+  box-shadow: 0 4px 12px 0 rgb(0 0 0 / 5%);
+  z-index: 200;
+  background: $color-white;
+  margin-bottom: 50px;
+  padding: 10px 20px;
+
+  & .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__logo {
+
+  }
+
+  &__logo-img {
+    aspect-ratio: 191/50;
+    height: 35px;
+    object-fit: contain;
+  }
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    margin: 0 24px;
+  }
+
+  &__nav-item {
+    margin-right: 16px;
+
+    a {
+      color: $primary-text-color;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-item .active-link {
+    font-weight: $o-font-weight-semi-bold;
+  }
+}
+

@@ -1,0 +1,6 @@
+<div class="row hidden-md-up">
+  <div class="col-md-4" *ngFor="let post of posts">
+    <!-- send post info to post item -->
+    <app-post-item [post]="post"></app-post-item>
+  </div>
+</div>

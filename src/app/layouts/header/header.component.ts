@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +7,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  public navLinks = [
+    {
+      path: 'home',
+      label: 'Home'
+    },
+    {
+      path: 'posts',
+      label: 'Posts'
+    },
+    {
+      path: 'users',
+      label: 'Users'
+    }
+  ];
+
+  public loginStatus: boolean = false;
+
+  constructor() {
+  }
 
   ngOnInit(): void {
+  }
+
+  fakeLogin() {
+    this.loginStatus = !this.loginStatus;
   }
 
 }

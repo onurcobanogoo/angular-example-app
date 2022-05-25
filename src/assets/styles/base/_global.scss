@@ -1,0 +1,11 @@
+body {
+  font-family: $primary-font;
+  color: $color-dark;
+  font-weight: $o-font-weight-regular;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+html {
+  scroll-behavior: smooth;
+}

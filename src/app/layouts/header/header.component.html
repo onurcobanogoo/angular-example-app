@@ -1,1 +1,13 @@
-<p>header works!</p>
+<header class='header'>
+  <div class="container">
+    <a [routerLink]="['/']" class='header__logo'>
+      <img src='assets/images/logo.png' alt='Logo' class='header__logo-img'>
+    </a>
+    <ul class='header__nav'>
+      <li class='header__nav-item' *ngFor="let navLink of navLinks; index as i;">
+        <a [routerLink]="[navLink.path]" [routerLinkActive]="'active-link'" class='header__nav-link'>{{navLink.label}}</a>
+      </li>
+    </ul>
+    <app-button (btnClick)="fakeLogin()" [btnText]="loginStatus ? 'Logout' : 'Login'"></app-button>
+  </div>
+</header>
