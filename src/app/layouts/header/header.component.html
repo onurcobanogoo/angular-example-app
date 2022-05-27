@@ -8,7 +8,6 @@
         <a [routerLink]="[navLink.path]" [routerLinkActive]="'active-link'" class='header__nav-link'>{{navLink.label}}</a>
       </li>
     </ul>
-    <span class='d-inline-block mx-3'>{{today | date: 'dd.mm.YYYY'}}</span>
     <app-button (btnClick)="fakeLogin()" [btnText]="loginStatus ? 'Logout' : 'Login'"></app-button>
   </div>
 </header>

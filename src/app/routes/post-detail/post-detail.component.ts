@@ -24,8 +24,11 @@ export class PostDetailComponent implements OnInit {
 
   private getPostDetail(postId: number) {
     this.postService.getPostDetail(postId).subscribe(post => {
-      this.postDetail = post;
+      this.processData(post)
     });
   }
 
+  private processData(post: IPost) {
+    this.postDetail = post;
+  }
 }
