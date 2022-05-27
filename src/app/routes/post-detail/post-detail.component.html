@@ -1,1 +1,4 @@
-<p>post-detail works!</p>
+<div *ngIf="postDetail" >
+  <h5>{{postDetail.title | uppercase}}</h5>
+  <p>{{postDetail.body}}</p>
+</div>

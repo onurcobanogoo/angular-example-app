@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
+import {Observable} from "rxjs";
 import {DataService} from "../../api/data.service";
 import {Endpoints} from "../../utils/endpoints";
 import {HttpMethods} from "../../utils/http-methods";
 import {IPost} from "../../models/Post";
-import {Observable} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -15,5 +15,9 @@ export class PostService {
 
   public getPosts(): Observable<IPost[]> {
     return this.dataService.serviceRequest<IPost[]>(Endpoints.getPostList, HttpMethods.GET);
+  }
+
+  public getPostDetail(id: number): Observable<IPost> {
+    return this.dataService.serviceRequest<IPost>(`${Endpoints.getPostList}/${id}`, HttpMethods.GET);
   }
 }

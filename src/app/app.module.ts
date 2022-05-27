@@ -15,6 +15,7 @@ import {HeaderComponent} from './layouts/header/header.component';
 
 import {ButtonComponent} from './components/button/button.component';
 import {PostItemComponent} from './components/post-item/post-item.component';
+import { UppercasePipe } from './pipes/uppercase.pipe';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import {PostItemComponent} from './components/post-item/post-item.component';
     PostDetailComponent,
     UserListComponent,
     UserDetailComponent,
-    PostItemComponent
+    PostItemComponent,
+    UppercasePipe
   ],
   imports: [
     BrowserModule,
