@@ -8,6 +8,7 @@
         <a [routerLink]="[navLink.path]" [routerLinkActive]="'active-link'" class='header__nav-link'>{{navLink.label}}</a>
       </li>
     </ul>
-    <app-button (btnClick)="fakeLogin()" [btnText]="loginStatus ? 'Logout' : 'Login'"></app-button>
+    <app-button class="mx-3" (btnClick)="fakeLogin()"  [btnText]="loginStatus ? 'Logout' : 'Login'"></app-button>
+    <app-button [appPermission]="['admin', 'manager']"  [btnText]="'Admin'"></app-button>
   </div>
 </header>

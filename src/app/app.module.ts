@@ -4,7 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 
 import {FormsModule} from "@angular/forms";
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 
@@ -12,7 +12,6 @@ import {HomeComponent} from './routes/home/home.component';
 import {PostListComponent} from './routes/post-list/post-list.component';
 import {PostDetailComponent} from './routes/post-detail/post-detail.component';
 import {UserListComponent} from './routes/user-list/user-list.component';
-import {UserDetailComponent} from './routes/user-detail/user-detail.component';
 
 import {HeaderComponent} from './layouts/header/header.component';
 
@@ -25,6 +24,8 @@ import {TableModule} from "primeng/table";
 import {InputTextModule} from 'primeng/inputtext';
 import {MultiSelectModule} from 'primeng/multiselect';
 import {DropdownModule} from 'primeng/dropdown';
+import { PermissionDirective } from './directives/permission.directive';
+import { AuthComponent } from './routes/auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -35,9 +36,10 @@ import {DropdownModule} from 'primeng/dropdown';
     PostListComponent,
     PostDetailComponent,
     UserListComponent,
-    UserDetailComponent,
     PostItemComponent,
-    UppercasePipe
+    UppercasePipe,
+    PermissionDirective,
+    AuthComponent
   ],
   imports: [
     BrowserModule,
